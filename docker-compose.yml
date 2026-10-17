@@ -1,0 +1,24 @@
+services:
+  organizer:
+    build: .
+    container_name: file_organizer_app
+    restart: unless-stopped
+    environment:
+      - DRY_RUN=false # Cambia a 'true' si quieres simular en lugar de mover
+      - TZ=America/Bogota
+    volumes:
+      - E:/Descargas:/app/target
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  dozzle:
+    image: amir20/dozzle:latest
+    container_name: dozzle_dashboard
+    restart: unless-stopped
+    ports:
+      - "8081:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

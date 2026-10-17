@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+DRY_RUN=true
+* * * * *  /usr/local/bin/python /app/main.py >> /var/log/cron.log 2>&1
+
+

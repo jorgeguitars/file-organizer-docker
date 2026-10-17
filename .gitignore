@@ -1,0 +1,28 @@
+# Archivos y carpetas de descargas temporales o procesadas
+downloads/*
+!downloads/.gitkeep
+
+# Caché de Python y archivos compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales de Python (por si usas venv o .venv)
+venv/
+.venv/
+ENV/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno y configuración sensible
+.env
+.env.local
+
+# IDEs y editores de código
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
